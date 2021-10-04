@@ -2,22 +2,21 @@
 #include <stdlib.h>
 
 /**
- * _printf - produces output according to a format
+ * *specifier - produces output according to a format
  * @format: character string composed of zero or more directives
  * Return: the number of characters printed
  */
 int (*specifier(const char *format))(va_list)
 {
-        int i = 0;
-        op_t ops[] = {
+	int i = 0;
+	op_t ops[] = {
 		{"c", op_c},
 		{"s", op_s},
 		{NULL, NULL}
 	};
-	
 	while (ops[i].op != NULL)
 	{
-		if(*(ops[i].op) == *format)
+		if (*(ops[i].op) == *format)
 		{
 			break;
 		}
