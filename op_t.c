@@ -57,7 +57,7 @@ int op_d(va_list d)
  */
 int op_i(va_list i)
 {
-        int y = (int)va_arg(y, int);
+        int y = (int)va_arg(i, int);
 
         _putchar(y);
         return (1);
