@@ -38,7 +38,7 @@ int op_s(va_list s)
 }
 /**
  * op_d - prints a int
- * @c: int to print
+ * @d: int to print
  *
  * Return: always 1
  */
@@ -51,7 +51,7 @@ int op_d(va_list d)
 }
 /**
  * op_c - prints a int
- * @c: int to print
+ * @i: int to print
  *
  * Return: always 1
  */
