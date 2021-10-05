@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_i - prints an integer
+ * op_i - prints an integer
  * @i: integer to print
  *
  * Return: number of chars and digits printed
  */
-int print_i(va_list i)
+int op_i(va_list i)
 {
 	int a[10];
 	int j, m, n, sum, count;
@@ -40,12 +40,12 @@ int print_i(va_list i)
 }
 
 /**
- * print_d - prints a decimal
+ * op_d - prints a decimal
  * @d: decimal to print
  *
  * Return: number of chars and digits printed
  */
-int print_d(va_list d)
+int op_d(va_list d)
 {
 	int a[10];
 	int j, m, n, sum, count;
