@@ -18,11 +18,11 @@ int (*specifier(const char *format))(va_list)
 	{
 		if (*(ops[i].op) == *format)
 		{
-			return (ops[i].f);
+			break;
 		}
 		i++;
 	}
-	return (0);
+	return (ops[i].f);
 }
 /**
  * _printf - produces output according to a format
@@ -37,6 +37,10 @@ int _printf(const char *format, ...)
 
 	i = 0;
 	count = 0;
+	if (!format)
+	{
+		return (-1);
+	}
 	va_start(args, format);
 	while (format[i])
 	{
@@ -56,10 +60,8 @@ int _printf(const char *format, ...)
 			i += 2;
 			continue;
 		}
-		if ((format[i + 1]) == '\0')
-		{
+		if (!(format[i + 1]))
 			return (-1);
-		}
 		_putchar(format[i]);
 		count++;
 		if (format[i + 1] == '%')
