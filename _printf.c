@@ -12,19 +12,17 @@ int (*specifier(const char *format))(va_list)
 	op_t ops[] = {
 		{"c", op_c},
 		{"s", op_s},
-		{"d", op_d},
-		{"i", op_i},
 		{NULL, NULL}
 	};
 	while (ops[i].op != NULL)
 	{
 		if (*(ops[i].op) == *format)
 		{
-			break;
+			return (ops[i].f);
 		}
 		i++;
 	}
-	return (ops[i].f);
+	return (0);
 }
 /**
  * _printf - produces output according to a format
@@ -58,7 +56,7 @@ int _printf(const char *format, ...)
 			i += 2;
 			continue;
 		}
-		if (!(format[i + 1]))
+		if ((format[i + 1]) == '\0')
 		{
 			return (-1);
 		}
