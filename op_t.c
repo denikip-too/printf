@@ -44,10 +44,10 @@ int op_s(va_list s)
  */
 int op_d(va_list d)
 {
-        int x = (int)va_arg(d, int);
+	int x = (int)va_arg(d, int);
 
-        _putchar(x);
-        return (1);
+	_putchar(x);
+	return (1);
 }
 /**
  * op_c - prints a int
@@ -57,9 +57,9 @@ int op_d(va_list d)
  */
 int op_i(va_list i)
 {
-        int y = (int)va_arg(i, int);
+	int y = (int)va_arg(i, int);
 
-        _putchar(y);
-        return (1);
+	_putchar(y);
+	return (1);
 }
 
