@@ -12,6 +12,8 @@ int (*specifier(const char *format))(va_list)
 	op_t ops[] = {
 		{"c", op_c},
 		{"s", op_s},
+		{"d", op_d},
+		{"i", op_i},
 		{NULL, NULL}
 	};
 	while (ops[i].op != NULL)
