@@ -15,8 +15,8 @@ int op_c(va_list c)
 	return (1);
 }
 /**
- * op_s - prints a char
- * @s: char to print
+ * op_s - prints a string
+ * @s: string to print
  *
  * Return: always 1
  */
@@ -36,3 +36,30 @@ int op_s(va_list s)
 	}
 	return (i);
 }
+/**
+ * op_d - prints a int
+ * @c: int to print
+ *
+ * Return: always 1
+ */
+int op_d(va_list d)
+{
+        int x = (int)va_arg(d, int);
+
+        _putchar(x);
+        return (1);
+}
+/**
+ * op_c - prints a int
+ * @c: int to print
+ *
+ * Return: always 1
+ */
+int op_i(va_list i)
+{
+        int y = (int)va_arg(y, int);
+
+        _putchar(y);
+        return (1);
+}
+
