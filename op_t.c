@@ -50,7 +50,7 @@ int op_d(va_list d)
 	return (1);
 }
 /**
- * op_c - prints a int
+ * op_i - prints a int
  * @i: int to print
  *
  * Return: always 1
@@ -62,4 +62,3 @@ int op_i(va_list i)
 	_putchar(y);
 	return (1);
 }
-
