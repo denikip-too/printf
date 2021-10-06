@@ -23,4 +23,6 @@ int op_s(va_list s);
 int op_d(va_list d);
 int op_i(va_list i);
 
+/* converter */
+char *convert(unsigned long int num, int base, int lowercase);
 #endif
