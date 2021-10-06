@@ -1,27 +1,55 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
- * convert - converts number and base into string
- * @num: input number
- * @base: input base
- * @lowercase: flag if hexa values need to be lowercase
- * Return: result string
+ * prints_hex - prints a char's ascii value in uppercase hex
+ * @c: char to print
+ *
+ * Return: number of chars printed (always 2)
  */
-char *convert(unsigned long int num, int base, int lowercase)
+int prints_hex(char c)
 {
-	static char *rep;
-	static char buffer[50];
-	char *ptr;
+	int count;
+	char diff = 'A' - ':';
+	char str[2];
 
-	rep = (lowercase)
-		? "0123456789abcdef"
-		: "0123456789ABCDEF";
-	ptr = &buffer[49];
-	*ptr = '\0';
-	do {
-		*--ptr = rep[num % base];
-		num /= base;
-	} while (num != 0);
+	str[0] = c / 16;
+	str[1] = c % 16;
+	for (count = 0; count < 2; count++)
+	{
+		if (str[count] >= 10)
+			_putchar('0' + diff + str[count]);
+		else
+			_putchar('0' + str[count]);
+	}
+	return (count);
+}
+/**
+ * op_S - prints a string
+ * @S: input string
+ * Return: no. of chars printed in string
+ */
+int op_S(va_list S)
+{
+	unsigned long int i = 0;
+	int count = 0;
+	char *rep = va_arg(S, char *);
 
-	return (ptr);
+	if (rep != NULL)
+	{
+		rep = "(null)";
+	}
+	while (rep[i])
+	{
+		if (rep[i] < 32 || rep[i] >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+			count += 2;
+			count += prints_hex(rep[i]);
+		}
+		_putchar(rep[i]);
+		count++;
+	}
+	return (count);
 }
