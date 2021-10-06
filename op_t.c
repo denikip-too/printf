@@ -28,7 +28,7 @@ int op_s(va_list s)
 	str = va_arg(s, char *);
 	if (!str)
 	{
-		str = "null";
+		str = "(null)";
 	}
 	for (i = 0; str[i]; i++)
 	{
