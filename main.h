@@ -29,4 +29,6 @@ int op_o(va_list o);
 int op_u(va_list u);
 int op_p(va_list p);
 int op_b(va_list b);
+int op_R(va_list R);
+int op_r(va_list r);
 #endif
