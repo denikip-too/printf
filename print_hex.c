@@ -68,12 +68,18 @@ int op_x(va_list x)
 {
 	return (print_hex(va_arg(x, unsigned int), 0));
 }
+/**
+ * op_X - takes an unsigned int and prints it in lowercase hex notation
+ * @X: unsigned int to print
+ *
+ * Return: number of digits printed
+ */
 int op_X(va_list X)
 {
 	return (print_hex(va_arg(X, unsigned int), 1));
 }
 /**
- * print_p - prints an address
+ * op_p - prints an address
  * @p: address to print
  *
  * Return: number of characters to print
