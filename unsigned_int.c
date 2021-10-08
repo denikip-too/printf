@@ -14,6 +14,7 @@ int op_b(va_list b)
 	
 	n = va_arg(b, unsigned int);
 	x = 2147483648;
+	a[0] = n / x;
 	for (i = 1; i < 32; i++)
 	{
 		x /= 2;
