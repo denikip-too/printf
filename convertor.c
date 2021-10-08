@@ -31,11 +31,11 @@ int prints_hex(char c)
  */
 int op_S(va_list S)
 {
-	unsigned long int i = 0;
+	unsigned int i = 0;
 	int count = 0;
 	char *rep = va_arg(S, char *);
 
-	if (rep != NULL)
+	if (rep == NULL)
 	{
 		rep = "(null)";
 	}
@@ -48,8 +48,12 @@ int op_S(va_list S)
 			count += 2;
 			count += prints_hex(rep[i]);
 		}
-		_putchar(rep[i]);
-		count++;
+		else
+		{
+			_putchar(rep[i]);
+			count++;
+		}
+		i++;
 	}
 	return (count);
 }
