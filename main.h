@@ -23,4 +23,9 @@ int op_s(va_list s);
 int op_d(va_list d);
 int op_i(va_list i);
 int op_S(va_list S);
+int op_x(va_list x);
+int op_X(va_list X);
+int op_o(va_list o);
+int op_u(va_list u);
+int op_p(va_list p);
 #endif
