@@ -20,6 +20,7 @@ int (*specifier(const char *format))(va_list)
 		{"u", op_u},
 		{"o", op_o},
 		{"p", op_p},
+		{"b", op_b},
 		{NULL, NULL}
 	};
 	while (ops[i].op != NULL)
