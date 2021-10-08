@@ -11,7 +11,7 @@ int op_b(va_list b)
 	unsigned int i, n, sum, x;
 	unsigned int a[32];
 	unsigned int count;
-	
+
 	n = va_arg(b, unsigned int);
 	x = 2147483648;
 	a[0] = n / x;
